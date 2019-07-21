@@ -1,13 +1,25 @@
-/* *** Font Name *** */
-// @font-face {
-//   font-family: 'Roboto';
-//   font-style: normal;
-//   font-weight: 400;
-//   font-display: swap;
-//   src:
-//     local('Roboto Regular'),
-//     local('Roboto-Regular'),
-//     url('../fonts/woff2/Roboto-Regular.woff2') format('woff2'),
-//     url('../fonts/woff2/Roboto-Regular.woff') format('woff');
-// }
+/* *** FILE NAME MUST BE *** */
+/* *** FontName-Weight *** */
+/* ***
+Weight:
+ 1. Thin
+ 2. ExtraLight
+ 3. Light
+ 4. Regular
+ 5. Medium
+ 6. SemiBold
+ 7. Bold
+ 8. ExtraBold
+ 9. Black
+*** */
+
+/* ***
+1. font-family
+2. font-style
+3. font-weight
+4. src
+*** */
+
+/* *** ProximaNova Bold *** */
+// @include font(Proxima Nova, normal, 700, ProximaNova);
 
