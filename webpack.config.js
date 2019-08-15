@@ -4,9 +4,7 @@
 // eslint-disable-next-line strict
 const path = require(`path`);
 const fs = require(`fs`);
-const {
-  CleanWebpackPlugin
-} = require(`clean-webpack-plugin`);
+const { CleanWebpackPlugin } = require(`clean-webpack-plugin`);
 const CopyWebpackPlugin = require(`copy-webpack-plugin`);
 const HtmlWebpackPlugin = require(`html-webpack-plugin`);
 const MiniCssExtractPlugin = require(`mini-css-extract-plugin`);
@@ -52,7 +50,8 @@ const config = {
   },
 
   module: {
-    rules: [{ // js
+    rules: [
+    { // js
       test: /\.js$/,
       exclude: `/node-modules/`,
       include: path.resolve(__dirname, `src/js`),
@@ -62,6 +61,9 @@ const config = {
           presets: [`@babel/preset-env`]
         }
       }
+    }, { // pug
+      test: /\.pug$/,
+      use: [`pug-loader`]
     }, { // sass|scss
       test: /\.(scss|sass)$/,
       include: path.resolve(__dirname, `src/sass`),
@@ -192,4 +194,4 @@ module.exports = (env, options) => {
   }
 
   return config;
-}
+};
